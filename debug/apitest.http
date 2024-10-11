@@ -1,0 +1,86 @@
+@baseUri=http://localhost:8023/api
+# @baseUri=https://melodis.co/api
+
+### update songs
+POST {{baseUri}}/process/update-songs
+Content-Type: application/json
+
+{
+   
+}
+
+
+### fetch songs
+POST {{baseUri}}/fetch-songs
+Content-Type: application/json
+
+{
+   "uuids": ["ca534ba7-df13-468d-9148-185e741458db","2eb8fbb2-b870-44fd-9f6b-68d663129c42","d78cfc42-d204-4181-a35a-489fc0af4ee1"]
+}
+
+### fetch trending songs
+POST {{baseUri}}/process/fetch-trending-songs
+Content-Type: application/json
+
+{
+   "page": 1,
+   "page_size": 100,
+   "provider": "udio"
+}
+
+### fetch latest songs
+POST {{baseUri}}/process/fetch-latest-songs
+Content-Type: application/json
+
+{
+   "page": 1,
+   "page_size": 100,
+   "provider": "udio"
+}
+
+### get song info
+POST {{baseUri}}/get-song-info
+Content-Type: application/json
+
+{
+   "uuid": "79a869b2-82b5-4a26-b5f4-8ae076d2c9f0"
+}
+
+### get random songs
+POST {{baseUri}}/get-random-songs
+Content-Type: application/json
+
+{
+   "page": 1,
+   "limit": 3
+}
+
+### gen song lyrics
+POST {{baseUri}}/gen-song-lyrics
+Content-Type: application/json
+
+{
+    "description": "写一首关于旅行的歌"
+}
+
+### gen music
+POST {{baseUri}}/gen-song
+Content-Type: application/json
+
+{
+    "description": "a hip-pop song about a beautiful lady.",
+    "style": "hip-pop1",
+    "lyric": "",
+    "title": "" 
+}
+
+### get favorite song
+POST {{baseUri}}/get-favorite-song
+Content-Type: application/json
+
+{
+   "song_uuid": "f81be5c0-3de9-4940-95e1-cfb780d3aa5e"
+}
+
+### 
+POST {{baseUri}}/get-top-songs
